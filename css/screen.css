@@ -398,6 +398,16 @@ a:focus {
   padding: 8px 0;
   display: block;
 }
+@media (min-width: 992px){
+  .c-header__nav{
+    display: flex;
+  }
+  .c-nav{
+    display: flex;
+    
+  }
+}
+
 .c-svg_logo {
   height: 32px;
 }
@@ -411,6 +421,48 @@ a:focus {
 .c-nav__link:focus {
   color: #dbedff;
   text-shadow: 0 0 8px #dbedff;
+}
+
+.c-link-cta {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 4px 0;
+  transition: color 0.175s ease-in;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+  color: #7373f5;
+}
+
+.c-link-cta::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #7373f5;
+  transform: scaleX(0.5);
+  transform-origin: left;
+  transition-property: transform background-color;
+  transition-duration: 0.175s;
+  transition-timing-function: ease-in;
+}
+
+.c-link-cta:hover {
+  color: #3e3ea8;
+}
+
+.c-link-cta:hover::after {
+  transform: scaleX(1);
+  background-color: #3e3ea8;
 }
 @media (min-width: 768px) {
   .c-nav__link {
